@@ -4,6 +4,9 @@
   "description": "nossa bibliteca de jss tdd na pá\u001b[Dr\u001b[C\u001b[Dática",
   "main": "index.js",
   "scripts": {
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "precommit": "npm run lint",
+    "prepush": "npm run lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +23,13 @@
   "bugs": {
     "url": "https://github.com/carlosheitor/js-tdd-course/issues"
   },
-  "homepage": "https://github.com/carlosheitor/js-tdd-course#readme"
+  "homepage": "https://github.com/carlosheitor/js-tdd-course#readme",
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "husky": "^3.0.8"
+  },
+  "dependencies": {
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
 }
